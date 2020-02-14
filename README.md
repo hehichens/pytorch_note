@@ -1,2 +1,4 @@
-# -
-统计学习方法上的代码
+﻿# pytorch 代码
+[来源](https://www.kesci.com)
+[博客地址(https://www.cnblogs.com/hichens/)
+
