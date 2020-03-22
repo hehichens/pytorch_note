@@ -74,20 +74,18 @@ def train_ch5(net, train_iter, test_iter, batch_size, optimizer, num_epochs):
               %(epoch+1, train_l_sum/batch_count, train_acc_sum/n, test_acc, time.time() - start))
 
        
-# =============================================================================
 # test train_ch5
-# net = LeNet()
-# lr, num_epochs = 1e-3, 5
-# optimizer = optim.Adam(net.parameters(), lr=lr)
-# train_ch5(
-#     net=net,
-#     train_iter=train_iter,
-#     test_iter=test_iter,
-#     batch_size=batch_size,
-#     optimizer=optimizer,
-#     num_epochs=num_epochs
-#     )
-# =============================================================================
+net = LeNet()
+lr, num_epochs = 1e-3, 5
+optimizer = optim.Adam(net.parameters(), lr=lr)
+train_ch5(
+    net=net,
+    train_iter=train_iter,
+    test_iter=test_iter,
+    batch_size=batch_size,
+    optimizer=optimizer,
+    num_epochs=num_epochs
+    )
 
 
 

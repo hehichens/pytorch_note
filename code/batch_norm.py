@@ -2,6 +2,7 @@
 import torch 
 from torch import nn, optim
 import d2lzh_pytorch as d2l
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 def batch_norm(is_training, X, gamma, beta, 
@@ -63,7 +64,7 @@ net = nn.Sequential(
            nn.Linear(84, 10)
        )
 
-batch_size = 256
+batch_size = 1
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size=batch_size)
 
 lr, num_epochs = 0.001, 5
