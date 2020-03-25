@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import torch 
 from torch import nn, optim
-import torch.nn.functional as F
 import d2lzh_pytorch as d2l
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
@@ -74,7 +73,7 @@ net.add_module("fc", nn.Sequential(d2l.FlattenLayer(), nn.Linear(512, 10)))
 # =============================================================================
 
 
-batch_size = 1
+batch_size = 128
 # 如出现“out of memory”的报错信息，可减小batch_size或resize
 train_iter, test_iter = d2l.load_data_fashion_mnist(batch_size, resize=96)
 
